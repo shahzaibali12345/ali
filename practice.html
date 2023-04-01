@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<table border="1">
+
+    <tr>
+
+<th> ID</th>
+<th> Name</th>
+<th> Batch</th>
+    </tr>
+    <tbody id="tbody">
+    </tbody>
+
+</table>
+
+    <script>
+var students={Id:101,Name:"Shahzaib",Batch:"PR2-202210E1"}
+    document.write(students.Name);
+
+var std1 = {Id:101 , Name:"Shahzaib" , Batch :"ooooo122344" };
+var std2 = {Id:102 , Name:"Shahzaib" , Batch :"ooooo122344" };
+var std3 = {Id:103 , Name:"Shahzaib" , Batch :"ooooo122344" };
+var std4 = {Id:104 , Name:"Shahzaib" , Batch :"ooooo122344" };
+var std5 = {Id:105 , Name:"Shahzaib" , Batch :"ooooo122344" };
+
+var students = [std1,std2,std3,std4,std5];
+students.forEach(function(item)
+{
+    document.getElementById("tbody").innerHTML +="<tr><td>"+item.Id+"</td><td>"+item.Name+"</td><td>"+item.Batch+"</td></tr>";
+})
+
+</script>
+
+</body>
+
+</html>

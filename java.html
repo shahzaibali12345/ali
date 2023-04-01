@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <!-- <img src="download (1).jfif" alt="" id="img"> <br> <br>
+<button onclick="change()" id="btn">Off</button>    
+
+<script>
+function change()
+{
+var btn=document.getElementById("btn").innerHTML;
+if(btn=="Off")
+{
+document.getElementById("img").src="download (1).jfif";
+document.getElementById("btn").innerHTML="off";
+}
+else{
+    document.getElementById("img").src="download.jfif";
+    document.getElementById("btn").innerHTML="On";
+}
+} -->
+<center>
+
+<h1> Registration Form </h1>
+<form action="form.html" onsubmit="return validation()">
+<input type="text" placeholder="Enter Your Name" id="user"><br>
+<span id="uerror"></span><br> 
+<input type="text" placeholder="Enter Your Email" id="email"> <br> 
+<span id="eerror"></span> <br>
+<input type="text" placeholder="Enter Your Password" id="pass"> <br> 
+<span id="perror"></span><br> 
+
+<input type="text" placeholder="Enter Your Confirm Password" id="cpass"> <br> 
+<span id="cperror"></span> <br>
+<input type="text" placeholder="Enter Your Mobile Number" id="mob"> <br> 
+<span id="moberror"></span> <br>
+<button> Submit </button>
+</form>
+</center>
+
+<script>
+
+function validation(){
+var user=document.getElementById("user").value;
+var email=document.getElementById("email").value;
+var pass=document.getElementById("pass").value;
+var cpass=document.getElementById("cpass").value;
+var mob=document.getElementById("mob").value;
+
+
+var usercheck=/^[A-Za-z ]{3,}$/;
+var emailcheck=/^[A-Za-z0-9_]{3,}@[A-Za-z]{3,}.[A-Za-z]{2,3}$/;
+var passcheck=/^(?=.*[A-za-z])(?=.*[!@#$%^&~])[A-za-z0-9!@#$%^&~]{8,}$/;
+var mobcheck=/^[0-9]{11}$/;
+
+
+if(usercheck.test(user))
+{
+    document.getElementById("uerror").innerHTML="";
+}
+else{
+    document.getElementById("uerror").innerHTML="Invalid Username";
+return false;
+}
+if(emailcheck.test(email))
+{
+    document.getElementById("eerror").innerHTML="";
+}
+else{
+    document.getElementById("eerror").innerHTML="Invalid Email";
+return false;
+
+}
+if(passcheck.test(pass))
+{
+    document.getElementById("perror").innerHTML="";
+}
+else{
+    document.getElementById("perror").innerHTML="Invalid Password";
+return false;
+}
+localStorage.setItem("Email",email);
+localStorage.setItem("Pass",pass);
+// sessionStorage.setItem("Email",email);
+// sessionStorage.setItem("Pass",Pass);
+
+}
+
+
+
+</script>
+
+
+
+</div>
+<!-- <script src="index.html"  ></script>
+<script>
+for(var i = 0;i<=products.lenght;i++)
+{
+document.getElementById("card").innerHTML+-<div class = "card"><img src='+products[i].img+' alt=''>
+
+} -->
+
+
+
+</body>
+</html>

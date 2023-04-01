@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+span{
+    color: darkred;
+}
+
+    </style>
+</head>
+<body>
+    <form action="#" onsubmit="return validation()">
+
+<input type="text" placeholder="Username" id="uname">
+<span id="uerror"></span>
+<input type="text" placeholder="Email" id="email">
+<span id="nerror"></span>
+<input type="text" placeholder="Password" id="pass">
+<span id="perror"></span>
+
+<button> SUBMIT </button>
+
+
+    </form>
+
+<script>
+
+function validation(){
+
+var user=document.getElementById("uname").value
+var email=document.getElementById("email").value
+var pass=document.getElementById("pass").value
+
+var usercheck=/^[A-Za-z .] {3,} [A-Za-z0-9] $/;
+var emailcheck=/^[A-Za-z_0-9] {3,} @ [A-Z a-z] . [A-Za-z]{2,3} $/;
+var passcheck=/^(?=.*[A-Za-z0-9])(?=.*[!@#$%^&*~])(?=.*[!@#$%^&*~])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+
+
+
+
+if(usercheck.test(user)){
+
+
+document.getElementById("uerror").innerHTML="";
+
+
+
+}
+else{
+    document.getElementById("uerror").innerHTML="INVALID USERNAME";
+
+}
+
+if(emailcheck.test(email)){
+
+
+document.getElementById("nerror").innerHTML="";
+
+
+
+}
+else{
+    document.getElementById("nerror").innerHTML="INVALID USERNAME";
+
+}
+
+if(emailcheck.test(pass)){
+
+document.getElementById("perror").innerHTML="";
+
+}
+else{
+    document.getElementById("perror").innerHTML="INVALID USERNAME";
+
+}
+
+}
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

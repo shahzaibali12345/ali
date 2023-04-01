@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="">
+<input type="text" placeholder="Enter Your Email" id="Email">
+<input type="text" placeholder="Enter Your Password" id="Pass">
+<input type="text" placeholder="Enter Your Mobile" id="Mob">
+<input type="submit" placeholder="Submit" onclick="login()"> -->
+    <!-- </form>
+
+<script>
+function login()
+{
+    var email = document.getElementById("Email").value;
+    var email = document.getElementById("Pass").value;
+}
+var getEmail = localStorage.getItem("Email").value
+var getpass = localStorage.getItem("Pass").value
+</script>
+</body>
+</html> -->
+<body>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.3139923422113!2d67.14963621532242!3d24.88726915031099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339999415e0c3%3A0x36742eee0fd9c291!2sAptech%20Metro%20Star%20Gate!5e0!3m2!1sen!2s!4v1672486343750!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+
+
+<button onclick="getlocation()"> Get Location</button>
+<script>
+
+function getlocation()
+{
+
+if(navigator.geolocation)
+{
+
+    navigator.geolocation.getCurrentPosition(showposition);
+}
+
+else{
+
+    alert("Browser does not location");
+}
+
+function showposition(Position)
+{
+    alert('latitude:'+Position.coords.latitude+'/n'+'longitude:' +Position.coords.longitude);
+}
+}
+
+
+</script>
+</body>
+</html>
